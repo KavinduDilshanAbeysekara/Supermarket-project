@@ -58,7 +58,7 @@ public class WebSecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(
                         auth -> auth
-                                .requestMatchers("/auth/***").permitAll() // allowing auth/login auth/register paths
+                                .requestMatchers("/auth/***").permitAll() // allowing auth/login auth/register paths /users/auth/***
                                 .anyRequest().authenticated() // user needs to login to access everything else
                 );
 
